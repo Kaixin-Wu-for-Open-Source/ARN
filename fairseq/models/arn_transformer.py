@@ -536,7 +536,7 @@ def base_architecture(args):
 
 
 @register_model_architecture(_MODEL_NAME_, '%s_iwslt_de_en' % _MODEL_NAME_)
-def ran_transformer_iwslt_de_en(args):
+def arn_transformer_iwslt_de_en(args):
     args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 256)
     args.encoder_ffn_embed_dim = getattr(args, 'encoder_ffn_embed_dim', 512)
     args.encoder_attention_heads = getattr(args, 'encoder_attention_heads', 4)
@@ -549,7 +549,7 @@ def ran_transformer_iwslt_de_en(args):
 
 
 @register_model_architecture(_MODEL_NAME_, '%s_toy' % _MODEL_NAME_)
-def ran_transformer_toy(args):
+def arn_transformer_toy(args):
     args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 64)
     args.encoder_ffn_embed_dim = getattr(args, 'encoder_ffn_embed_dim', 64)
     args.encoder_attention_heads = getattr(args, 'encoder_attention_heads', 4)
@@ -562,12 +562,12 @@ def ran_transformer_toy(args):
 
 
 @register_model_architecture(_MODEL_NAME_, '%s_wmt_en_de' % _MODEL_NAME_)
-def ran_transformer_wmt_en_de(args):
+def arn_transformer_wmt_en_de(args):
     base_architecture(args)
 
 
 @register_model_architecture(_MODEL_NAME_, '%s_prenorm_wmt_en_de' % _MODEL_NAME_)
-def ran_transformer_prenorm_wmt_en_de(args):
+def arn_transformer_prenorm_wmt_en_de(args):
     args.encoder_normalize_before = True
     args.decoder_normalize_before = True
     args.attention_dropout = getattr(args, 'attention_dropout', 0.1)
@@ -576,14 +576,14 @@ def ran_transformer_prenorm_wmt_en_de(args):
 
 
 @register_model_architecture(_MODEL_NAME_, '%s_prenorm_deep_wmt_en_de' % _MODEL_NAME_)
-def ran_transformer_prenorm_deep_wmt_en_de(args):
+def arn_transformer_prenorm_deep_wmt_en_de(args):
     args.encoder_layers = 20
     ran_transformer_prenorm_wmt_en_de(args)
 
 
 # parameters used in the "Attention Is All You Need" paper (Vaswani, et al, 2017)
 @register_model_architecture(_MODEL_NAME_, '%s_vaswani_wmt_en_de_big' % _MODEL_NAME_)
-def ran_transformer_vaswani_wmt_en_de_big(args):
+def arn_transformer_vaswani_wmt_en_de_big(args):
     args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 1024)
     args.encoder_ffn_embed_dim = getattr(args, 'encoder_ffn_embed_dim', 4096)
     args.encoder_attention_heads = getattr(args, 'encoder_attention_heads', 16)
@@ -596,22 +596,22 @@ def ran_transformer_vaswani_wmt_en_de_big(args):
 
 
 @register_model_architecture(_MODEL_NAME_, '%s_vaswani_wmt_en_fr_big' % _MODEL_NAME_)
-def ran_transformer_vaswani_wmt_en_fr_big(args):
+def arn_transformer_vaswani_wmt_en_fr_big(args):
     args.dropout = getattr(args, 'dropout', 0.1)
-    ran_transformer_vaswani_wmt_en_de_big(args)
+    arn_transformer_vaswani_wmt_en_de_big(args)
 
 
 @register_model_architecture(_MODEL_NAME_, '%s_wmt_en_de_big' % _MODEL_NAME_)
-def ran_transformer_wmt_en_de_big(args):
+def arn_transformer_wmt_en_de_big(args):
     args.attention_dropout = getattr(args, 'attention_dropout', 0.1)
-    ran_transformer_vaswani_wmt_en_de_big(args)
+    arn_transformer_vaswani_wmt_en_de_big(args)
 
 
 # default parameters used in tensor2tensor implementation
 @register_model_architecture(_MODEL_NAME_, '%s_wmt_en_de_big_t2t' % _MODEL_NAME_)
-def ran_transformer_wmt_en_de_big_t2t(args):
+def arn_transformer_wmt_en_de_big_t2t(args):
     args.encoder_normalize_before = True
     args.decoder_normalize_before = True
     args.relu_dropout = getattr(args, 'relu_dropout', 0.1)
     args.attention_dropout = getattr(args, 'attention_dropout', 0.1)
-    ran_transformer_vaswani_wmt_en_de_big(args)
+    arn_transformer_vaswani_wmt_en_de_big(args)
