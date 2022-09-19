@@ -1,4 +1,7 @@
-## Wait ...
+#### Data preparation: 
+- cd ARN
+- sh runs/prepare-wmt14-en2de.sh
 
-#### ARN code: 
-- https://github.com/Kaixin-Wu-for-Open-Source/ARN/blob/main/fairseq/models/arn_transformer.py
+#### Model Training
+baseline: sh runs/run-wmt14-en2de-baseline.sh  
+ARN: sh sh runs/run-wmt14-en2de-arn.sh
