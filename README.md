@@ -1,4 +1,4 @@
-## Data preparation: 
+## Data Preparation
 - cd ARN
 - sh runs/prepare-wmt14-en2de.sh
 
