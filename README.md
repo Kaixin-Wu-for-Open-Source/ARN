@@ -1,8 +1,6 @@
 ## Data Preparation
 
-Download WMT14 En->De data to **ARN/** directory.   
-
-[Link]: https://drive.google.com/file/d/1_dXmqiTKCfg7N41neKzxbgCynts0zXJo/view?usp=sharing
+Download [WMT14 En->De](https://drive.google.com/file/d/1_dXmqiTKCfg7N41neKzxbgCynts0zXJo/view?usp=sharing) data to **ARN/** directory.
 
 ```shell
 sh runs/prepare-wmt14-en2de.sh
