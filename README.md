@@ -1,3 +1,7 @@
+## Introduction
+
+The Implementation of **《Speeding Up Transformer Decoding via an Attention Refinement Network》** [COLING2022，Long Paper]（Kaixin Wu, Yue Zhang, Bojie Hu, Tong Zhang）
+
 ## Data Preparation
 
 Download [WMT14 En->De](https://drive.google.com/file/d/1_dXmqiTKCfg7N41neKzxbgCynts0zXJo/view?usp=sharing) data to **ARN/** directory.
